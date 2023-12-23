@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <title data-localized="title">Проверка валидности дипломов организаций высшего и послевузовского образования Республики Казахстан</title>
+
+  <link href="images/favicon.png" rel="icon">
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/modals.css" rel="stylesheet">
+  <link href="css/loader.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+
+  <script src="js/api.js"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+
+    <div id="title" data-localized="title">Проверка валидности дипломов организаций высшего и послевузовского образования Республики Казахстан</div>
+
+    <div id="lang-selector">
+      <div class="lang-selector-node" data-locale="kk"><i class="flag flag-kz"></i>қаз</div>
+      <div class="lang-selector-node" data-locale="ru"><i class="flag flag-ru"></i>рус</div>
+      <div class="lang-selector-node" data-locale="en"><i class="flag flag-us"></i>eng</div>
+    </div>
+
+  </div>
+
+  <div id="body">
+
+    <div id="menu">
+      <a href="/tipo-verify/" class="menu-node" data-localized="menu-tipo-verify">Проверка валидности дипломов организаций ТиПО</a>
+      <a class="menu-node active-node" data-localized="menu-vuz-verify">Проверка валидности дипломов вузов</a>
+      <a href="/generate-tipo/" class="menu-node" data-localized="menu-generate-diploma-tipo">Генерация данных по дипломам ТиПО</a>
+      <a href="/generate-vuz/" class="menu-node" data-localized="menu-generate-diploma-vuz">Генерация данных по дипломам вузов</a>
+    </div>
+    
+    <div id="contents">
+
+      <div id="userforms">
+        
+        <div id="guide" class="bordered-container">
+
+          <div class="collapse-header">
+            
+          </div>
+
+          <div class="collapse-content">
+
+            <div class="info-block" data-localized="i1">Уважаемые пользователи системы! Данный функционал разработан для проверки валидности дипломов, выданных организациями высшего или послевузовского образования.</div>
+            <div class="info-block" data-localized="i2">Данная система позволяет убедиться в подлинности дипломов.</div>
+            <div class="info-block" data-localized="i3">Проверка валидности дипломов осуществляется на основании ИИН, серии и номера диплома. Данные поля заполняются на основании документа, удостоверяющего личность, и диплома, выданного организацией высшего или послевузовского образования.</div>
+
+            <div class="info-block" data-localized="i4">Алгоритм проверки:</div>
+
+            <div class="info-block" style="font-weight: bold;" data-localized="i5">1. Введите ИИН в поле «ИИН»</div>
+            <div class="info-block" data-localized="i6">Поле «ИИН» заполняется только при проверке дипломов, выданных резидентам Республики Казахстан, либо нерезидентам, получившим временный ИИН. В случае отсутствия ИИН данное поле не заполняется.</div>
+
+            <div class="info-block" style="font-weight: bold;" data-localized="i7">2. Введите серию диплома в поле «Серия диплома»</div>
+            <div class="info-block" data-localized="i8">Серия диплома обязательна для заполнения и представлена в виде буквенного кода (BD, BQ, MD, ЖБ-Б, ЖБ, ЖООК-М и др.)</div>
+
+            <div class="info-block" style="font-weight: bold;" data-localized="i9">3. Введите номер диплома в поле «Номер диплома»</div>
+            <div class="info-block" data-localized="i10">Номер диплома обязателен для заполнения и представлен в виде цифрового кода, состоящего из 7-11 цифр.</div>
+
+            <div class="info-block" data-localized="i11">В настоящее время в системе содержится информация о дипломах, выданных в 2020-2021 учебном году. Организациями высшего и послевузовского образования ведется работа по оцифровке дипломов прошлых лет. В связи с этим, информация о дипломах прошлых лет на данный момент может отсутствовать в системе. В случае отсутствия сведений о дипломе, выданном ранее 2020-2021 учебного года, необходимо обращаться в организацию высшего или послевузовского образования для дополнительного подтверждения.</div>
+           
+          </div>
+
+        </div>
+
+        <div id="form" class="bordered-container">
+
+          <div class="form-section">
+            <label data-localized="iin-field">ИИН</label>
+            <input type="text" class="form-control" id="iin-field">
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-section">
+            <label data-localized="diploma-series-field">Серия диплома</label><span style="margin-left: 2px; color: red;">*</span>
+            <input type="text" class="form-control" id="diploma-series-field">
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-section">
+            <label data-localized="diploma-number-field">Номер диплома</label><span style="margin-left: 2px; color: red;">*</span>
+            <input type="text" class="form-control" id="diploma-number-field">
+            <div class="help-block with-errors"></div>
+          </div>
+          
+          <div class="form-buttons">
+            <button type="button" class="btn btn-success" id="verify-btn" data-localized="verify-btn">Проверить</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+  </div>
+
+  <div id="footer">
+    <div id="credits" data-localized="credits"></div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/modals.js"></script>
+  <script type="text/javascript" src="js/loader.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
+
+
+
+</body>
+</html>

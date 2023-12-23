@@ -1,0 +1,63 @@
+/* GUIDE */
+
+#guide .collapse-content {
+	display: flex;
+	flex-flow: column nowrap;
+	row-gap: 15px;
+}
+
+/* FORM */
+
+#form {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 15px;
+}
+
+/* STUDENT INFO */
+
+.info-field {
+	padding: 8px 0;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.info-field-header {
+	flex: min(50%, 350px) 0 0;
+	padding-right: 15px;
+	font-weight: bold;
+}
+
+.info-field-contents {
+
+}
+
+@media (max-width: 799px) {
+
+	.info-field {
+		flex-flow: column nowrap;
+	}
+
+	.info-field-header {
+		flex: 1;
+		margin-bottom: 8px;
+		padding-right: 0;
+	}
+
+	.info-field-contents {
+		
+	}
+
+}
+
+/* CONTACTS */
+
+#contacts-table {
+
+}
+
+#contacts-table th, 
+#contacts-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
